@@ -1,28 +1,29 @@
-import Signup from './Signup'
+import Home from './Home'
 import Dashboard from './Dashboard'
-import Login from './Login'
 import ForgotPassword from './ForgotPassword'
 import UpdateProfile from './UpdateProfile'
 import { Container } from 'react-bootstrap'
-import { AuthProvider } from '../contexts/AuthContext'
+import { AuthProvider } from './contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute'
-
+import Navbar from './components/Navbar'
 function App() {
   return (
     <Container
-      className="d-flex align-items-center justify-content-center"
+      className=""
       style={{ minHeight: "100vh" }}
     >
+      <Navbar />
       <div className="w-100" style={{ maxWidth: "400px" }}>
       <Router>
        <AuthProvider>
          <Switch>
-            <PrivateRoute exact path="/" component={ Dashboard } />
+            <Route exact path="/" component={ Home } />
+            <PrivateRoute exact path="/dashboard" component={ Dashboard } />
             <PrivateRoute exact path="/update-profile" component={ UpdateProfile } />
-            <Route path="/signup" component={ Signup } />
-            <Route path="/login" component={ Login } />
-            <Route path="/forgot-password" component={ ForgotPassword } />
+            {/* <Route exact path="/signup" component={ Signup } /> */}
+            {/* <Route exact path="/login" component={ Login } /> */}
+            <Route exact path="/forgot-password" component={ ForgotPassword } />
          </Switch>
        </AuthProvider>
        </Router>
