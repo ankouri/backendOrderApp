@@ -1,3 +1,11 @@
+// REACT_APP_FIREBASE_API =AIzaSyAPXbo4vdyKEUBRHf5WN1jmGGBTdR0iiBA
+// REACT_APP_FIREBASE_DOMAIN =auth-dev-50406.firebaseapp.com
+// REACT_APP_FIREBASE_DATABASE =https://auth-dev-50406-default-rtdb.firebaseio.com 
+// REACT_APP_FIREBASE_PROJECT =auth-dev-50406
+// REACT_APP_FIREBASE_STORAGE =auth-dev-50406.appspot.com
+// REACT_APP_FIREBASE_MESSAGIN =311415817224 
+// REACT_APP_FIREBASE_APPID =1:311415817224:web:583659087a30dd74c7bdbd 
+
 import React from 'react'
 import { Grid, Avatar,Box, makeStyles, Button, Paper, Chip} from "@material-ui/core";
 import { useAuth } from '../contexts/AuthContext';
